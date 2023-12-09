@@ -1,0 +1,1087 @@
+/*--------------------------------------------------------------
+# BODY
+--------------------------------------------------------------*/
+:root {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+    background-image: url(../img/background.png);
+  }
+  
+  a {
+    color: #4154f1;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #717ff5;
+    text-decoration: none;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Nunito", sans-serif;
+  }
+  
+  /*--------------------------------------------------------------
+  # Akhir BODY
+  --------------------------------------------------------------*/
+  
+  
+  /*--------------------------------------------------------------
+  # CSS DIBAGIAN SECTION
+  --------------------------------------------------------------*/
+  section {
+    padding: 60px 0;
+    overflow: hidden;
+  }
+  
+  .section-header {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  
+  .section-header h2 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0;
+    color: #4154f1;
+    text-transform: uppercase;
+  }
+  
+  .section-header p {
+    margin: 10px 0 0 0;
+    padding: 0;
+    font-size: 38px;
+    line-height: 42px;
+    font-weight: 700;
+    color: #012970;
+  }
+  
+  @media (max-width: 768px) {
+    .section-header p {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # Akhir Sections
+  --------------------------------------------------------------*/
+  
+  
+  /*--------------------------------------------------------------
+  # TOMBOL KEATAS
+  --------------------------------------------------------------*/
+  .back-to-top {
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    right: 15px;
+    bottom: 15px;
+    z-index: 99999;
+    background: #4154f1;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    transition: all 0.4s;
+  }
+  
+  .back-to-top i {
+    font-size: 24px;
+    color: #fff;
+    line-height: 0;
+  }
+  
+  .back-to-top:hover {
+    background: #6776f4;
+    color: #fff;
+  }
+  
+  .back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /*--------------------------------------------------------------
+  # Akhir TOMBOL KEATAS
+  --------------------------------------------------------------*/
+  
+  
+  /*--------------------------------------------------------------
+  # Disable animation delay on mobile devices
+  --------------------------------------------------------------*/
+  @media screen and (max-width: 768px) {
+    [data-aos-delay] {
+      transition-delay: 0 !important;
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # Akhir Disable animation delay on mobile devices
+  --------------------------------------------------------------*/
+  
+  
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+  .header {
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 20px 0;
+  }
+  
+  .header.header-scrolled {
+    background: #fff;
+    padding: 15px 0;
+    box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+  }
+  
+  .header .logo {
+    line-height: 0;
+  }
+  
+  .header .logo img {
+    max-height: 40px;
+    margin-right: 6px;
+  }
+  
+  .header .logo span {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #012970;
+    font-family: "Nunito", sans-serif;
+    margin-top: 3px;
+  }
+  
+  /*--------------------------------------------------------------
+  # Akhir Header
+  --------------------------------------------------------------*/
+  
+  
+  /*--------------------------------------------------------------
+  # NAVBAR
+  --------------------------------------------------------------*/
+  /**
+  * Desktop Nav
+  */
+  .navbar {
+    padding: 0;
+  }
+  
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
+  }
+  
+  .navbar a,
+  .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 10px 30px;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #013289;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+  
+  .navbar a i,
+  .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+  
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>a {
+    color: #4154f1;
+  }
+  
+  .navbar .getstarted,
+  .navbar .getstarted:focus {
+    background: #4154f1;
+    padding: 8px 20px;
+    margin-left: 30px;
+    border-radius: 4px;
+    color: #fff;
+  }
+  
+  .navbar .getstarted:hover,
+  .navbar .getstarted:focus:hover {
+    color: #fff;
+    background: #5969f3;
+  }
+  
+  .navbar .dropdown ul {
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: calc(100% + 30px);
+    margin: 0;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    transition: 0.3s;
+    border-radius: 4px;
+  }
+  
+  .navbar .dropdown ul li {
+    min-width: 200px;
+  }
+  
+  .navbar .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    font-weight: 600;
+  }
+  
+  .navbar .dropdown ul a i {
+    font-size: 12px;
+  }
+  
+  .navbar .dropdown ul a:hover,
+  .navbar .dropdown ul .active:hover,
+  .navbar .dropdown ul li:hover>a {
+    color: #4154f1;
+  }
+  
+  .navbar .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+  
+  .navbar .megamenu {
+    position: static;
+  }
+  
+  .navbar .megamenu ul {
+    margin-top: 5px;
+    right: 0;
+    padding: 10px;
+    display: flex;
+  }
+  
+  .navbar .megamenu ul li {
+    flex: 1;
+  }
+  
+  .navbar .megamenu ul li a,
+  .navbar .megamenu ul li:hover>a {
+    color: #013289;
+  }
+  
+  .navbar .megamenu ul li a:hover,
+  .navbar .megamenu ul li .active,
+  .navbar .megamenu ul li .active:hover {
+    color: #4154f1;
+  }
+  
+  .navbar .dropdown .dropdown ul {
+    top: 0;
+    left: calc(100% - 30px);
+    visibility: hidden;
+  }
+  
+  .navbar .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: 100%;
+    visibility: visible;
+  }
+  
+  @media (max-width: 1366px) {
+    .navbar .dropdown .dropdown ul {
+      left: -90%;
+    }
+  
+    .navbar .dropdown .dropdown:hover>ul {
+      left: -100%;
+    }
+  }
+  
+  /**
+  * Mobile Nav
+  */
+  .mobile-nav-toggle {
+    color: #012970;
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+    line-height: 0;
+    transition: 0.5s;
+  }
+  
+  .mobile-nav-toggle.bi-x {
+    color: #fff;
+  }
+  
+  @media (max-width: 1200px) {
+    .mobile-nav-toggle {
+      display: block;
+    }
+  
+    .navbar ul {
+      display: none;
+    }
+  }
+  
+  .navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(1, 22, 61, 0.9);
+    transition: 0.3s;
+  }
+  
+  .navbar-mobile .mobile-nav-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+  }
+  
+  .navbar-mobile a,
+  .navbar-mobile a:focus {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #012970;
+  }
+  
+  .navbar-mobile a:hover,
+  .navbar-mobile .active,
+  .navbar-mobile li:hover>a {
+    color: #4154f1;
+  }
+  
+  .navbar-mobile .getstarted,
+  .navbar-mobile .getstarted:focus {
+    margin: 15px;
+  }
+  
+  .navbar-mobile .dropdown ul {
+    position: static;
+    display: none;
+    margin: 10px 20px;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  }
+  
+  .navbar-mobile .dropdown ul li {
+    min-width: 200px;
+  }
+  
+  .navbar-mobile .dropdown ul a {
+    padding: 10px 20px;
+  }
+  
+  .navbar-mobile .dropdown ul a i {
+    font-size: 12px;
+  }
+  
+  .navbar-mobile .dropdown ul a:hover,
+  .navbar-mobile .dropdown ul .active:hover,
+  .navbar-mobile .dropdown ul li:hover>a {
+    color: #4154f1;
+  }
+  
+  .navbar-mobile .dropdown>.dropdown-active {
+    display: block;
+  }
+  
+  /*--------------------------------------------------------------
+  # Akhir NAVBAR
+  --------------------------------------------------------------*/
+  
+  
+  /*--------------------------------------------------------------
+  #   <!-- ======= HOME FOTO IT DEL ======= -->
+  --------------------------------------------------------------*/
+  .homeitdel {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/v13_1159.png) top center no-repeat;
+    background-size: cover;
+  }
+  
+  .homeitdel h1 {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    color: #012970;
+  }
+  
+  .homeitdel h6 {
+    color: #444444;
+    font-size: 16px;
+  }
+  
+  .homeitdel .btn-get-started {
+    margin-top: 30px;
+    line-height: 0;
+    padding: 15px 40px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background-color: #007bff;
+    box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
+  }
+  
+  .homeitdel .btn-get-started span {
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  .homeitdel .btn-get-started i {
+    margin-left: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  
+  .homeitdel .btn-get-started:hover i {
+    transform: translateX(5px);
+  }
+  
+  .homeitdel .homeitdel-img {
+    text-align: right;
+  }
+  
+  @media (min-width: 1024px) {
+    .homeitdel {
+      background-attachment: fixed;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .homeitdel {
+      height: auto;
+      padding: 120px 0 60px 0;
+    }
+  
+    .homeitdel .homeitdel-img {
+      text-align: center;
+      margin-top: 80px;
+    }
+  
+    .homeitdel .homeitdel-img img {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .homeitdel {
+      text-align: center;
+    }
+  
+    .homeitdel h1 {
+      font-size: 32px;
+    }
+  
+    .homeitdel h2 {
+      font-size: 24px;
+    }
+  
+    .homeitdel .homeitdel-img img {
+      width: 100%;
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  #   <!-- ======= Akhir HOME FOTO IT DEL ======= -->
+  --------------------------------------------------------------*/
+  
+  
+  /*--------------------------------------------------------------
+  # Index Page
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+  # Sejarah IT DEL
+  --------------------------------------------------------------*/
+  .sejarahitdel .content {
+    background-color: #f6f9ff;
+    padding: 40px;
+  }
+  
+  .sejarahitdel h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #4154f1;
+    text-transform: uppercase;
+  }
+  
+  .sejarahitdel h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #012970;
+  }
+  
+  .sejarahitdel p {
+    margin: 15px 0 30px 0;
+    line-height: 24px;
+  }
+  
+  .sejarahitdel .btn-read-more {
+    line-height: 0;
+    padding: 15px 40px;
+    border-radius: 4px;
+    transition: 0.5s;
+    color: #fff;
+    background-color: #007bff;
+    box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
+  }
+  
+  .sejarahitdel .btn-read-more span {
+    font-family: "Nunito", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  .sejarahitdel .btn-read-more i {
+    margin-left: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  
+  .sejarahitdel .btn-read-more:hover i {
+    transform: translateX(5px);
+  }
+  
+  /*--------------------------------------------------------------
+  # Akhir Sejarah IT DEL
+  --------------------------------------------------------------*/
+  
+  
+  /*--------------------------------------------------------------
+  # HALAMAN REKOMENDASI
+  --------------------------------------------------------------*/
+  .rekomendasi .box {
+    padding: 30px;
+    box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
+    text-align: center;
+    transition: 0.3s;
+    background-color: #f6f9ff;
+    height: 100%;
+  }
+  
+  .rekomendasi .box img {
+    padding: 30px 50px;
+    transition: 0.5s;
+    transform: scale(1.1);
+  }
+  
+  .rekomendasi .box h3 {
+    font-size: 24px;
+    color: #012970;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  
+  .rekomendasi .box:hover {
+    box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
+  }
+  
+  .rekomendasi .box:hover img {
+    transform: scale(1);
+  }
+  
+  /*--------------------------------------------------------------
+  # Akhir HALAMAN REKOMENDASI
+  --------------------------------------------------------------*/
+  
+  /*--------------------------------------------------------------
+  # BoxKecil
+  --------------------------------------------------------------*/
+  .BoxKecil {
+    padding: 70px 0 60px;
+  }
+  
+  .BoxKecil .BoxKecil-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    background-color: #f6f9ff;
+    box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
+  }
+  
+  .BoxKecil .BoxKecil-box i {
+    font-size: 42px;
+    line-height: 0;
+    margin-right: 20px;
+    color: #4154f1;
+  
+  }
+  
+  .BoxKecil .BoxKecil-box span {
+    font-size: 36px;
+    display: block;
+    font-weight: 600;
+    color: #0b198f;
+  
+  }
+  
+  .BoxKecil .BoxKecil-box p {
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+  
+  }
+  
+  /*--------------------------------------------------------------
+  # Akhir Box Kecil
+  --------------------------------------------------------------*/
+  
+  
+  /*--------------------------------------------------------------
+  # Berita Terkini
+  --------------------------------------------------------------*/
+  .b-0 {
+    bottom: 0;
+  }
+  
+  .bg-shadow {
+    background: rgba(76, 76, 76, 0);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179, 171, 171, 0)), color-stop(49%, rgba(48, 48, 48, 0.37)), color-stop(100%, rgba(19, 19, 19, 0.8)));
+    background: linear-gradient(to bottom, rgba(179, 171, 171, 0) 0%, rgba(48, 48, 48, 0.71) 49%, rgba(19, 19, 19, 0.8) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0);
+  }
+  
+  .top-indicator {
+    right: 0;
+    top: 1rem;
+    bottom: inherit;
+    left: inherit;
+    margin-right: 1rem;
+  }
+  
+  .overflow {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .zoom img {
+    transition: all 0.2s linear;
+  }
+  
+  .zoom:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  /*--------------------------------------------------------------
+  # Akhir Berita Terkini
+  --------------------------------------------------------------*/
+  
+  
+  /*--------------------------------------------------------------
+  # Berita SPMB
+  --------------------------------------------------------------*/
+  .beritaspmb .post-box {
+    box-shadow: 0px 5px 25px rgba(65, 84, 241, 0.3);
+    background-color: #f6f9ff;
+    height: 100%;
+    overflow: hidden;
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .beritaspmb .post-box .post-img {
+    overflow: hidden;
+    margin: -30px -30px 15px -30px;
+    position: relative;
+  }
+  
+  .beritaspmb .post-box .post-img img {
+    transition: 0.5s;
+  }
+  
+  .beritaspmb .post-box .post-tanggal {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(1, 41, 112, 0.6);
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .beritaspmb .post-box .post-title {
+    font-size: 24px;
+    color: #012970;
+    font-weight: 700;
+    margin-bottom: 18px;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  .beritaspmb .post-box .readmore {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    line-height: 1;
+    transition: 0.3s;
+  }
+  
+  .beritaspmb .post-box .readmore i {
+    line-height: 0;
+    margin-left: 4px;
+    font-size: 18px;
+  }
+  
+  .beritaspmb .post-box:hover .post-title {
+    color: #4154f1;
+  }
+  
+  .beritaspmb .post-box:hover .post-img img {
+    transform: rotate(6deg) scale(1.2);
+  }
+  
+  /*--------------------------------------------------------------
+  # Akhir Berita SPMB
+  --------------------------------------------------------------*/
+  
+  
+  /*--------------------------------------------------------------
+  # Testimoni Alumni
+  --------------------------------------------------------------*/
+  .testimonialumni .testimonialumni-item {
+    box-sizing: content-box;
+    padding: 8%;
+    margin: 40px 30px;
+    box-shadow: 0px 0 20px rgba(1, 41, 112, 0.1);
+    background-color: #f6f9ff;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.3s;
+  }
+  
+  .testimonialumni .testimonialumni-item .stars {
+    margin-bottom: 15px;
+  }
+  
+  .testimonialumni .testimonialumni-item .stars i {
+    color: #ffc107;
+    margin: 0 1px;
+  }
+  
+  .testimonialumni .testimonialumni-item .testimonialumni-img {
+    width: 90px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin: 0 auto;
+  }
+  
+  .testimonialumni .testimonialumni-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    color: #111;
+  }
+  
+  .testimonialumni .testimonialumni-item h4 {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+  }
+  
+  .testimonialumni .testimonialumni-item p {
+    margin: 0 auto 15px auto;
+  }
+  
+  .testimonialumni .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  .testimonialumni .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    opacity: 1;
+    border: 1px solid #4154f1;
+  }
+  
+  .testimonialumni .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #4154f1;
+  }
+  
+  .testimonialumni .swiper-slide {
+    opacity: 0.3;
+  }
+  
+  @media (max-width: 1199px) {
+    .testimonialumni .swiper-slide-active {
+      opacity: 1;
+    }
+  
+    .testimonialumni .swiper-pagination {
+      margin-top: 0;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .testimonialumni .swiper-slide-next {
+      opacity: 1;
+      transform: scale(1.12);
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # Akhir Testimoni Alumni
+  --------------------------------------------------------------*/
+  
+  
+  /*--------------------------------------------------------------
+  # FOOTER
+  --------------------------------------------------------------*/
+  .footer {
+    background: #082c74;
+    background-size: cover;
+  
+  }
+  
+  .first {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: rgb(206, 206, 206);
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .first h4 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #fff;
+    padding-bottom: 0.5em;
+  }
+  
+  .first h4::after {
+    content: '';
+    background: #66c83d;
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .first p {
+    font-size: 14px;
+  }
+  
+  .second {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: rgb(206, 206, 206);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+  
+  .second2 {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: rgb(206, 206, 206);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+  
+  .second h4 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #fff;
+    padding-bottom: 0.5em;
+  }
+  
+  .second h4::after {
+    content: '';
+    background: #66c83d;
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+  }
+  
+  
+  .second li {
+    list-style: none;
+    padding-bottom: 30px;
+  }
+  
+  .second a,
+  .second2 a {
+    color: rgb(206, 206, 206);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+  }
+  
+  .second a:hover,
+  .second2 a:hover {
+    color: #fff;
+    transition: 0.2s;
+    text-shadow: 1px 1px 20px rgba(0, 0, 0, 1);
+    text-decoration: none
+  }
+  
+  
+  
+  .third {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: rgb(206, 206, 206);
+    font-family: 'Poppins', sans-serif;
+    text-align: right;
+  }
+  
+  
+  .third h4 {
+    font-size: 20px;
+    letter-spacing: 3px;
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #fff;
+    padding-bottom: 0.5em;
+  }
+  
+  
+  .third h4::after {
+    content: '';
+    background: #66c83d;
+    width: 20%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 80%;
+  }
+  
+  
+  
+  .third li {
+    list-style: none;
+    padding-bottom: 15px;
+  }
+  
+  
+  .third a {
+    color: rgb(206, 206, 206);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+  }
+  
+  
+  .third a:hover {
+    color: #fff;
+    transition: 0.2s;
+    text-shadow: 1px 1px 20px rgba(0, 0, 0, 1);
+  }
+  
+  
+  @media screen and (max-width:1000px) {
+    .first {
+      text-align: center;
+    }
+  
+    .first h4::after {
+      left: 40%;
+    }
+  }
+  
+  @media screen and (max-width:1000px) {
+    .third {
+      text-align: center;
+    }
+  
+    .third h4::after {
+      left: 40% !important;
+    }
+  }
+  
+  .margin {
+    margin-left: 20px;
+  }
+  
+  .line {
+    height: 2px;
+    background-color: rgb(206, 206, 206);
+    width: 100%;
+  }
+  
+  .container h1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  .carousel-item > img {
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+  }
+
+.bg-purple{
+  background-color: #461973;
+}
